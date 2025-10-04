@@ -21,21 +21,21 @@ export default function Home() {
           <h2 className="text-5xl font-medium">
             Book your doctor appointment in seconds
           </h2>
-          <p className="text-lg font-light">
-            {` No waiting, no hassle. AI Receptionist connects you directly with your doctor&apos;s office,
+          <p className="text-lg font-medium">
+            {` No waiting, no hassle. AI Receptionist connects you directly with your doctor's office,
             helps you schedule calls, and sends reminders — all through a quick, natural conversation.`}
           </p>
 
           <div className="space-y-2">
             <PopUpButton />
-            <p className="text-sm text-gray-500">
+            <p className="text-sm text-gray-500 font-medium">
               Try calling the phone number above to schedule call
             </p>
           </div>
         </div>
 
-        <div className="md:min-w-[260px] max-w-[270px]  mt-10">
-          <Android className="size-full" videoSrc="/video.mp4" />
+        <div className="sm:min-w-[270px] sm:max-w-[280px] sm:mt-5  mt-14   flex items-center justify-center ">
+          <Android className="size-full ml-7" videoSrc="/video.mp4" />
         </div>
 
       </div>
