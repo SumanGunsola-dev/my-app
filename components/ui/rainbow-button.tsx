@@ -4,8 +4,6 @@ import { cva, VariantProps } from "class-variance-authority"
 
 import { cn } from "@/lib/utils"
 
-interface RainbowButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
 
 const rainbowButtonVariants = cva(
   cn(
@@ -40,7 +38,7 @@ const rainbowButtonVariants = cva(
 
 interface RainbowButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof rainbowButtonVariants> {
+  VariantProps<typeof rainbowButtonVariants> {
   asChild?: boolean
 }
 
