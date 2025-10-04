@@ -16,7 +16,7 @@ export default function Home() {
 
         <div id="header" className="space-y-10 max-w-2xl p-5">
           <h1 className="font-bold text-5xl">
-            Call <AuroraText>Ai Receptionist</AuroraText>
+            Meet <AuroraText>Cally Ai Receptionist</AuroraText>
           </h1>
           <h2 className="text-5xl font-medium">
             Book your doctor appointment in seconds
