@@ -22,8 +22,8 @@ export default function Home() {
             Book your doctor appointment in seconds
           </h2>
           <p className="text-lg font-light">
-            No waiting, no hassle. AI Receptionist connects you directly with your doctor&apos;s office,
-            helps you schedule calls, and sends reminders — all through a quick, natural conversation.
+            {` No waiting, no hassle. AI Receptionist connects you directly with your doctor&apos;s office,
+            helps you schedule calls, and sends reminders — all through a quick, natural conversation.`}
           </p>
 
           <div className="space-y-2">
