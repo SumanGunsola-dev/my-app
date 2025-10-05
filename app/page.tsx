@@ -1,13 +1,15 @@
 import { BlurFade } from "@/components/ui/blur-fade"
 import { NavButton } from "@/components/NavbarButton"
 import PopUpButton from "@/components/PopUpButton"
+import robott from "../public/images.jpg"
 import user from "../public/images(3).jpg"
 import battery from '../public/battery.svg'
 import network from '../public/network.svg'
 import Image from "next/image"
 import { AnimatedList } from "@/components/ui/animated-list"
 import { BorderBeam } from "@/components/ui/border-beam"
-import robott from "../public/robot.svg"
+import CurrentTime from "@/components/currentTime"
+
 import signal1 from "../public/wifi-svgrepo-com.svg"
 export default function Home() {
 
@@ -16,7 +18,7 @@ export default function Home() {
 
     <BlurFade delay={0.25} >
       <NavButton />
-      <div className="nata flex  min-h-fit  flex-col md:flex-row sm:gap-36  justify-center  items-center border-purple-200 border-[2px] rounded-xl sm:m-4 m-1  pt-10 px-10">
+      <div className="nata flex  min-h-fit  flex-col sm:flex-wrap md:flex-row sm:gap-36  justify-center  items-center border-purple-200 border-[2px] rounded-xl sm:m-3 m-1 sm:pt-16 md:pt-10 px-10">
         <div className="absolute top-0 -z-10 h-full w-full bg-white"><div className="absolute bottom-auto left-auto right-0 top-0 h-[500px] w-[500px] -translate-x-[30%] translate-y-[20%] rounded-full bg-[rgba(173,109,244,0.5)] opacity-50 blur-[80px]"></div></div>
 
         <div id="header" className="space-y-10 max-w-2xl p-5">
@@ -54,7 +56,7 @@ export default function Home() {
               className="from-transparent via-blue-500 to-transparent"
             />
             <div className="w-full flex flex-row items-center justify-around pt-2 px-3 mt-0.5 ">
-              <span className="font-medium ml-2">9:41</span>
+              <CurrentTime />
               <span className="w-[74px] h-5  rounded-2xl bg-gray-800/90 ml-12"></span>
               <div className="flex  items-center gap-2 justify-end ml-4">
 
@@ -76,7 +78,7 @@ export default function Home() {
               <AnimatedList delay={1000} className="max-w-64 flex flex-col-reverse space-y-2 ">
                 <div className=" shadow-sm px-2 py-1 mr-4 rounded-lg bg-gray-50/90 shadow-gray-300">
                   <div className="flex gap-2">
-                    <Image src={robott} alt="robot1" className="w-4" /><span className="font-extrabold">Cally Ai Agent</span>
+                    <Image src={robott} alt="robot1" className="w-5 h-5 rounded-3xl" /><span className="font-extrabold">Cally AI </span>
                   </div>
                   <span className="text-gray-600">
                     Hey there ,This is Cally How may i help you ?
@@ -90,7 +92,7 @@ export default function Home() {
                 </div>
                 <div className="shadow-sm px-2 py-1 mr-4 rounded-lg bg-gray-50/90 shadow-gray-300">
                   <div className="flex gap-2">
-                    <Image src={robott} alt="robot1" className="w-4" /><span className="font-extrabold">Cally Ai Agent</span>
+                    <Image src={robott} alt="robot1" className="w-5 h-5 rounded-3xl" /><span className="font-extrabold">Cally AI </span>
                   </div>
                   <span className="text-gray-600">Sure! What day and time works best for you?</span>
                 </div>

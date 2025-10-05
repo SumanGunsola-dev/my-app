@@ -133,8 +133,8 @@ const PopUpButton = () => {
             {/* Rainbow Button */}
             <div className="flex space-y-3 flex-col items-start">
                 <RainbowButton onClick={() => (setPopUp(!popUp))} >
-                    <Image src={phone} alt="phone" className=" w-5 h-6 " />
-                    +1 8644798961
+                    <Image src={phone} alt="phone" className=" w-5 h-8 " />
+                    +1 (864) 479-8961
                 </RainbowButton>
             </div>
         </div>
