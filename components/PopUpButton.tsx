@@ -15,7 +15,7 @@ import {
 } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-
+import { useRouter } from 'next/navigation'
 interface UserInfo {
     email: string;
     phone: string;
@@ -28,7 +28,7 @@ const PopUpButton = () => {
         email: "",
         phone: ""
     })
-
+    const router = useRouter();
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setuserinfo((prev) => ({
             ...prev,
@@ -37,22 +37,31 @@ const PopUpButton = () => {
         );
     }
 
-    const handleClick = () => {
+    const handleClick = async () => {
         if (!userinfo.email || !userinfo.phone) {
             alert("Please fill out all fields");
-            setsubmitting(false);
             return;
         }
         setsubmitting(true);
-        //  submission logic here
-        setTimeout(() => {
+        try {
+            const res = await fetch(`https://cally.pranjalrana.com/make-call?number=${encodeURIComponent(userinfo.phone)}&email=${encodeURIComponent(userinfo.email)}`);
+
+            const text = await res.text();
+            if (text == "hello") {
+                setPopUp(false);
+                setuserinfo({
+                    email: "",
+                    phone: ""
+                });
+            }
+        } catch (error) {
+            console.log("error ", error);
+
+        }
+        finally {
             setsubmitting(false);
-            setPopUp(false);
-            setuserinfo({
-                email: "",
-                phone: ""
-            });
-        }, 2000);
+
+        }
     }
 
     return (
@@ -123,9 +132,9 @@ const PopUpButton = () => {
 
             {/* Rainbow Button */}
             <div className="flex space-y-3 flex-col items-start">
-                <RainbowButton onClick={() => setPopUp(!popUp)}>
+                <RainbowButton onClick={() => (setPopUp(!popUp))} >
                     <Image src={phone} alt="phone" className=" w-5 h-6 " />
-                    +1 (415) 873-1159
+                    +1 8644798961
                 </RainbowButton>
             </div>
         </div>
