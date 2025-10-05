@@ -18,10 +18,10 @@ export default function Home() {
 
     <BlurFade delay={0.25} >
       <NavButton />
-      <div className="nata flex  min-h-full  flex-col sm:flex-wrap md:flex-row sm:gap-36 mb-4 sm:mb-0 justify-center  items-center border-purple-200 border-[2px] rounded-xl sm:m-3 m-1 sm:pt-16 md:pt-10 px-10">
+      <div className="nata flex  min-h-[88vh]  flex-col sm:flex-wrap md:flex-row sm:gap-36 sm:mb-4 mb-4 md:mb-0 justify-center  items-center md:items-end border-purple-200 border-[2px] rounded-xl sm:m-3 m-1 sm:pt-16 md:pt-10 px-10">
         <div className="absolute top-0 -z-10 h-full w-full bg-white"><div className="absolute bottom-auto left-auto right-0 top-0 h-[500px] w-[500px] -translate-x-[30%] translate-y-[20%] rounded-full bg-[rgba(173,109,244,0.5)] opacity-50 blur-[80px]"></div></div>
 
-        <div id="header" className="space-y-10 max-w-2xl p-5">
+        <div className="space-y-10 max-w-2xl p-5 md:mb-24">
           <h1 className="font-bold text-5xl">
             Meet Cally AI
           </h1>
@@ -85,8 +85,9 @@ export default function Home() {
                   </span>
                 </div>
                 <div className="ml-7 shadow-sm px-2 py-1 rounded-xl bg-purple-400/50 shadow-pink-300 ">
-                  <Image src={user} alt="user" className="w-5 h-5 rounded-3xl" />
-
+                  <div className="flex gap-2">
+                    <Image src={user} alt="user" className="w-5 h-5 rounded-3xl" /><span className="font-extrabold">Mr. Jhon </span>
+                  </div>
                   <span className="text-gray-800">I would like to schedule an appointment with Dr. Smith for next week.
                   </span>
                 </div>
