@@ -18,7 +18,7 @@ export default function Home() {
 
     <BlurFade delay={0.25} >
       <NavButton />
-      <div className="nata flex  min-h-fit  flex-col sm:flex-wrap md:flex-row sm:gap-36  justify-center  items-center border-purple-200 border-[2px] rounded-xl sm:m-3 m-1 sm:pt-16 md:pt-10 px-10">
+      <div className="nata flex  min-h-full  flex-col sm:flex-wrap md:flex-row sm:gap-36  justify-center  items-center border-purple-200 border-[2px] rounded-xl sm:m-3 m-1 sm:pt-16 md:pt-10 px-10">
         <div className="absolute top-0 -z-10 h-full w-full bg-white"><div className="absolute bottom-auto left-auto right-0 top-0 h-[500px] w-[500px] -translate-x-[30%] translate-y-[20%] rounded-full bg-[rgba(173,109,244,0.5)] opacity-50 blur-[80px]"></div></div>
 
         <div id="header" className="space-y-10 max-w-2xl p-5">
